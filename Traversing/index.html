@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Traversing using jquery</title>
+    <link rel="stylesheet" href="Style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('.ceo').children().css('color', 'red')
+            // $('.ceo').parent().css('color', 'red')
+            // $('.ceo').siblings().css('color', 'red')
+           $('p').on('click', function(){
+            $('ul').append('<li>you added me</li>');
+           });
+        });
+    </script>
+</head>
+<body>
+    <h3> The Big three</h3>
+    <p>who pioneered village 88</p>
+    <ul>
+        <li class="ceo">Micheal Choi</li>
+        <li>John Supsupin</li>
+        <li>Jadee Gangganan</li>
+    </ul>
+</body>
+</html>

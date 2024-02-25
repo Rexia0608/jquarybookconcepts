@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+            $(document).ready(function(){
+                //event handler
+                $('button').click(function(){
+                });
+                            // click is the event, button is the target element in every event 
+                $(document).on('click', 'button', function(){
+                    // this part happen the event that you want 
+                    $('.Dynamic-Element').append('<button>A new dynmic button here!</button>')
+                });
+            });
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h1>Goal: when any utton will click it should be render a new button</h1>
+        <p>This concenpt help you to under stand the Dynamic concenpt in Jquary</p>
+
+        <div class="static-content">
+            <h2>Static content</h2>
+            <button>button #1</button>
+            <button>button #2</button>
+            <button>button #3</button>
+        </div>
+        <div class="Dynamic-content">
+           <h3>Dynamic content</h3>
+           <div class="Dynamic-Element">
+
+           </div>
+        </div>
+    </div>
+</body>
+</html>

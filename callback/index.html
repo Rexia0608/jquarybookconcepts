@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Callback concept using jquery</title>
+        <link rel="stylesheet" href="style.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+        <script>
+
+            // this is the example of callback function which render whatever the event inside the document 
+                function attach_handler(){
+                    $('li').mouseover(function(){
+                        $(this).css('color', 'red');
+                    });
+                }    
+              $(document).ready(function(){
+                // calling the function above 
+                attach_handler();
+                $('button').click(function(){
+                    $('.new').append('<li>I am a new dynamic content!</li>');
+                    attach_handler();
+                })       
+            });
+        </script>
+    </head>
+    <body>
+        <button>click me</button>
+        <ul class="old">
+            <li>I am a static content!</li>
+            <li>I am a static content!</li>
+        </ul>
+        <ul class="new">
+        </ul>
+    </body>
+</html>
+    
